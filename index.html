@@ -10,23 +10,32 @@
 </head>
 <body>
     <div id="container">
-        <div id="header"></div>
+        <div id="header">
+            Etch-a-Sketch
+        </div>
         <div id="main-container">
             <div id="buttons">
-                <button id="clear-grid" 
-                        onclick="clearGrid()">Clear Grid</button>
                 <button id="black-ink" 
                         onclick="blackenPen()">Black</button>
                 <button id="rainbow-ink" 
                         onclick="rainbowPen()">Rainbow</button>
-                <button id="select-ink">Select Colour
-                    <input type="color">
+                <button id="select-ink-button"
+                        onclick="selectColourPen()">Select Colour
+                    <input id="select-ink" 
+                           type="color">
                 </button>
                 <button id="eraser" onclick="eraser()">Eraser</button>
+                <button id="clear-grid" 
+                onclick="clearGrid()">Clear Grid</button>
+                <label id="grid-size-label" for="grid-size">Grid size: 8 x 8</label>
+                <input id="grid-size" name="grid-size" type="range" min="3" max="64">
             </div>
             <div id="game-container"></div>
         </div>
-        <div id="footer"></div>
+        <div id="footer">
+            Made possible by &copy; The Odin Project ||
+            Ben Rice Web Design&trade;
+        </div>
     </div>
 </body>
 </html>
